@@ -133,11 +133,10 @@ public class SpreadsheetCalculator {
     public static void main(String args[] ) throws Exception {
         readSheet();
         for(String key : sheet.keySet()) {
-            if (!solve(key)) {
+            if (!solve(key))
                 System.out.println("Error: Circular dependency!");
-                return;
-            }
-            System.out.println(sheet.get(key));
+            else
+            	System.out.println(sheet.get(key));
         }
     }
 
